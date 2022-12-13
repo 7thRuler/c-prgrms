@@ -6,6 +6,7 @@ int front=-1;
 void enqueue(int a);
 void dequeue();
 void display();
+void peek();
 
 void main()
 {
@@ -13,7 +14,7 @@ void main()
 	while(1)
 	{
 		printf("\nMENU");
-		printf("\n1.enqueue\n2.dequeue\n3.display\n4.exit");
+		printf("\n1.enqueue\n2.dequeue\n3.display\n4.peek\n5.exit");
 		printf("enter your choice: ");
 		scanf("%d",&x);
 	
@@ -32,8 +33,11 @@ void main()
 		case 3:
 			display();
 			break;
-		
 		case 4:
+			peek();
+			break;
+		
+		case 5:
 			exit(0);
 		default:
 			printf("enter correct choice");
@@ -81,5 +85,9 @@ void display()
 			printf("\n");
 		}
 	}
+}
+void peek()
+{
+	printf("peek element is: %d",queue[front]);
 }
 
